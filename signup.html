@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="logintemplate1.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>SignUp</h1>
+            <form method="post">
+                <div class="text_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Email Id</label>
+                </div>
+                <div class="text_field">
+                    <input type="password" class="pass1" required>
+                    <span></span>
+                    <label>Password</label>
+                    <p class="show">SHOW</p>
+                </div>
+                <div class="text_field">
+                    <input type="text" class="pass1" required>
+                    <span></span>
+                    <label>Confirm Password</label>
+                    
+                </div>
+
+                
+                <input type="submit" value="SUBMIT" style="color: white;">
+                
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        const pass_f = document.querySelector('.pass1');
+        const show_f = document.querySelector('.show');
+        show_f.addEventListener('click', function () {
+            if (pass_f.type == 'password') {
+                pass_f.type = 'text';
+                show_f.innerText = 'HIDE';
+                show_f.style.color = 'rgb(95, 131, 252)';
+            }
+            else {
+                pass_f.type = 'password';
+                show_f.innerText = 'SHOW';
+                show_f.style.color = 'black';
+            }
+        })
+    </script>
+</body>
+
+</html>
